@@ -1,21 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #004aad;
+  --accent: #3abef9;
+  --teal: #1aa6b7;
+  --softgray: #f2f5f8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Your Travel Brand Colors */
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-teal: var(--teal);
+  --color-softgray: var(--softgray);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* 🌞 Light Mode Colors */
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+
+  /* Travel Brand Colors */
+  --primary: #004aad; /* Deep Blue */
+  --accent: #3abef9; /* Sky Blue */
+  --teal: #1aa6b7; /* Teal */
+  --softgray: #f2f5f8; /* Soft Gray */
+}
+
+/* 🌙 Dark Mode Colors */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    /* Dark mode variations of your brand colors */
+    --primary: #0d3a7a;
+    --accent: #2ba4d5;
+    --teal: #148093;
+    --softgray: #1a1a1a;
   }
 }
 
@@ -23,4 +51,100 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background Utilities */
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-teal {
+  background-color: var(--teal);
+}
+
+.bg-softgray {
+  background-color: var(--softgray);
+}
+
+/* Text Color Utilities */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-teal {
+  color: var(--teal);
+}
+
+.text-softgray {
+  color: var(--softgray);
+}
+
+/* Border Utilities */
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.border-teal {
+  border-color: var(--teal);
+}
+
+.border-softgray {
+  border-color: var(--softgray);
+}
+
+/* Button Style Utilities */
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background-color: var(--primary);
+}
+
+/* Text Hover Utilities */
+.hover\:text-primary:hover {
+  color: var(--primary);
+}
+
+.hover\:text-accent:hover {
+  color: var(--accent);
+}
+
+.hover\:text-teal:hover {
+  color: var(--teal);
+}
+
+/* Background Hover Utilities */
+.hover\:bg-primary:hover {
+  background-color: var(--primary);
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--accent);
+}
+
+.hover\:bg-teal:hover {
+  background-color: var(--teal);
 }
